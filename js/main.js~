@@ -1,0 +1,61 @@
+$(document).ready(function(){
+
+    var callback = function () {
+        var value = $("input[type=text]").val();
+        if(value == '') {
+            return false;
+        }
+        /* clear input */
+        $("input[type=text]").val('');
+        $.ajax ({
+            url:"http://api.openweathermap.org/data/2.5/weather?" +
+            "appid=1ec052023c49e1517c1f91424d764b7f&units=metric",
+            method: "get",
+            data: {q:value},
+            dataType: 'json',
+            success: function(data){
+                //var result = $('.weather-wrapper ul');
+                var result = $('<li />').appendTo('.weather-wrapper ul');
+                result.html('- ' + data.name +'&#44;'+' '+data.sys.country +': '
+                    + data.main.temp +'&#8451;' + '&#44;' +' '
+                    + data.weather[0].description);
+            }
+        });
+        $(".clear").on("click", function(){
+            $('.weather-wrapper ul').find("li").remove();
+        });
+    };
+
+
+    /* Enter button */
+    $("input").keypress(function() {
+        if (event.which == 13) callback();
+    });
+    /* add */
+    $('input[type=submit]').click(callback);
+    /*$("input[type=submit]").on("click", function(){
+    });*/
+
+
+
+
+
+        // $('.weather-wrapper ul').append('<li>'+value+'</li>');
+
+        /* ajax */
+
+
+        /*
+        function weather() {
+            var p = document.createElement("p");
+            p.innerHTML = weather.temp;
+            $('.weather-wrapper').append('weather.name');
+        }
+        */
+
+
+
+    /* clear */
+
+
+});

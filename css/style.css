@@ -1,0 +1,110 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0; }
+
+body {
+  background: #3f51b5;
+  font-family: Arial, sans-serif; }
+
+body, ul, p, li, a, span, div, h1, h2, h3 {
+  margin: 0;
+  padding: 0; }
+
+input, button {
+  border: none; }
+
+input[type="text"]:focus {
+  outline: none; }
+
+ol, ul, li {
+  list-style: none; }
+
+input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0; }
+
+.main {
+  width: 100%;
+  position: relative;
+  margin: auto; }
+  .main .container {
+    position: relative;
+    width: 650px;
+    margin: 120px auto 0; }
+    .main .container header {
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 63px; }
+    .main .container .main-wrapper {
+      position: relative; }
+      .main .container .main-wrapper .weather_city {
+        width: 100%;
+        height: 52px;
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        padding-left: 17px;
+        background-color: #3f51b5;
+        border: 2px solid white;
+        /* Firefox 19+ */
+        /* Firefox 18- */ }
+        .main .container .main-wrapper .weather_city::-webkit-input-placeholder {
+          color: white; }
+        .main .container .main-wrapper .weather_city::-moz-placeholder {
+          color: white; }
+        .main .container .main-wrapper .weather_city:-moz-placeholder {
+          color: white; }
+        .main .container .main-wrapper .weather_city:-ms-input-placeholder {
+          color: white; }
+      .main .container .main-wrapper .search {
+        cursor: pointer;
+        position: absolute;
+        width: 77px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background-color: white;
+        border: 2px solid white;
+        color: #3f51b5;
+        font-size: 14px;
+        font-weight: 400; }
+    .main .container .weather-wrapper ul {
+      color: white;
+      margin: 45px 0; }
+      .main .container .weather-wrapper ul li {
+        margin-bottom: 15px;
+        font-size: 18px; }
+        .main .container .weather-wrapper ul li span {
+          font-size: 24px; }
+    .main .container .clear {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 90px auto 0;
+      cursor: pointer;
+      width: 66px;
+      height: 32px;
+      color: #3f51b5;
+      font-size: 14px;
+      font-weight: 400;
+      background-color: white;
+      border: 2px solid white; }
+
+/* media queries */
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .main .container {
+    width: 90%; } }
+
+/*# sourceMappingURL=style.css.map */
